@@ -90,8 +90,22 @@ rauchen_frei          – Rauchfrei-Daten pro User
 
 1. XAMPP installieren und starten (Apache + MySQL)
 2. Projekt in `/htdocs/php/projekt/projekt_php/` ablegen
-3. Datenbank `projekt` in phpMyAdmin importieren
-4. Aufrufen unter `http://localhost/php/projekt/projekt_php/`
+3. Datenbank `projekt` in phpMyAdmin anlegen und `projekt.sql` importieren
+4. Datei `db.php` im Projektverzeichnis erstellen:
+
+```php
+<?php
+function db(): mysqli {
+    $con = mysqli_connect("127.0.0.1", "root", "", "projekt");
+    if (!$con) {
+        die("Verbindung nicht geklappt");
+    }
+    mysqli_set_charset($con, "utf8mb4");
+    return $con;
+}
+```
+
+5. Aufrufen unter `http://localhost/php/projekt/projekt_php/`
 
 ---
 
