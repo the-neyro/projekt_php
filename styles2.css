@@ -1,0 +1,253 @@
+/* ===== Variables & Reset ===== */
+:root {
+  --bg: #ffffff;
+  --text: #111;
+  --muted: #666;
+  --line: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+/* ===== Navigation ===== */
+.topbar {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav > div:last-child {
+  display: flex;
+  gap: 36px;
+}
+
+.brand {
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.nav a {
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 4px 0;
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
+/* ===== Layout ===== */
+.container,
+.container-wide {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 16px;
+}
+
+.dash {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+/* ===== Card ===== */
+input,
+textarea,
+button,
+.btn,
+.card,
+table,
+.menu a {
+  border-radius: 0 !important;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 18px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ===== Typography ===== */
+h1 {
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  font-size: 28px;
+}
+
+p {
+  color: var(--muted);
+}
+
+.container h1,
+.container h2,
+.container p.small {
+  text-align: center;
+}
+
+/* ===== Inputs ===== */
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #111;
+  background: transparent;
+  font: inherit;
+}
+
+textarea {
+  min-height: 90px;
+}
+
+/* ===== Buttons ===== */
+.btn,
+button,
+input[type="submit"] {
+  border: 1px solid #111;
+  background: transparent;
+  color: #111;
+  padding: 10px 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover {
+  background: #111;
+  color: #fff;
+}
+
+.btn.danger {
+  border-color: #9a2b2b;
+  color: #9a2b2b;
+}
+
+.btn.danger:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* ===== Links ===== */
+a.link {
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #111;
+}
+
+a.link:hover {
+  background: #111;
+  color: #fff;
+  padding: 4px 6px;
+  border-bottom-color: #111;
+  text-decoration: none;
+}
+
+a.link.dash:hover {
+  background: #111;
+  color: #fff;
+  padding: 12px;
+  border-bottom-color: #111;
+  text-decoration: none;
+}
+
+/* ===== Menu ===== */
+.menu {
+  border-top: 1px solid var(--line);
+  margin: 18px 0;
+  width: 100%;
+  max-width: 420px;
+}
+
+.menu a {
+  display: block;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  color: #111;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background: #111;
+  color: #fff;
+}
+
+.menu a.danger {
+  color: #9a2b2b;
+}
+
+.menu a.danger:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* ===== Table ===== */
+table,
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--line);
+}
+
+.table td,
+.table th,
+table td,
+table th {
+  border-bottom: 1px solid var(--line);
+  padding: 12px 10px;
+  vertical-align: top;
+}
+
+table a {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.actions a {
+  display: inline-block;
+  padding: 4px 6px;
+  color: #111;
+  text-decoration: none;
+  border: 1px solid #111;
+}
+
+.actions a:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* ===== Hero images (hidden in this design) ===== */
+.heroimg {
+  display: none !important;
+}
